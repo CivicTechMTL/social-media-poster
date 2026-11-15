@@ -1,0 +1,18 @@
+{
+  "number": "18",
+  "date": "2027-01-14",
+  "time": "18:30",
+  "format": "hybrid",
+  "speakers": [
+    {
+      "name": "À confirmer · To be announced",
+      "initials": "?",
+      "placeholder": true
+    }
+  ],
+  "talk": {
+    "en": "..............................",
+    "fr": ".............................."
+  },
+  "luma": "https://luma.com/wsl322rz"
+}

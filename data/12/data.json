@@ -1,0 +1,12 @@
+{
+  "number": "12",
+  "date": "2026-09-24",
+  "time": "18:30",
+  "format": "hybrid",
+  "speakers": [],
+  "talk": {
+    "en": "September Build Night",
+    "fr": "Soirée projets de septembre"
+  },
+  "luma": "https://luma.com/kq6ornmo"
+}

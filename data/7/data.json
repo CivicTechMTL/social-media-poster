@@ -1,0 +1,18 @@
+{
+  "number": "7",
+  "date": "2026-05-07",
+  "bsky-backfill-date": "2026-05-06T10:00",
+  "time": "18:30",
+  "format": "hybrid",
+  "speakers": [
+    {
+      "name": "Kim Donaldson",
+      "photo": "kim-donaldson.jpg"
+    }
+  ],
+  "talk": {
+    "en": "Digital Accessibility for the Public Sphere",
+    "fr": "L'accessibilité numérique dans la sphère publique"
+  },
+  "luma": "https://luma.com/52wyh8gy"
+}

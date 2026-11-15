@@ -1,0 +1,19 @@
+{
+  "number": "5",
+  "series": "Hacknight",
+  "date": "2026-03-19",
+  "bsky-backfill-date": "2026-03-18T10:00",
+  "time": "18:30",
+  "format": "hybrid",
+  "speakers": [
+    {
+      "name": "Mohammad Asad Chaudhry",
+      "photo": "mohammad.jpg"
+    }
+  ],
+  "talk": {
+    "en": "Demystifying AI: Breaking Myths and Empowering Civic Innovation",
+    "fr": "Démystifier l'IA : déconstruire les mythes et favoriser l'innovation civique"
+  },
+  "luma": "https://luma.com/rb21xw1v"
+}

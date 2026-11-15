@@ -1,0 +1,10 @@
+{
+  // Jinja templates: highlight {% %} / {{ }} on top of HTML (needs the Better Jinja extension).
+  "files.associations": {
+    "templates/*.html": "jinja-html"
+  },
+  // Keep Emmet and HTML tag completion working inside those templates.
+  "emmet.includeLanguages": {
+    "jinja-html": "html"
+  }
+}

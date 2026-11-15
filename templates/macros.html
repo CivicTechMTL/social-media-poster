@@ -1,0 +1,57 @@
+{% macro heading(ev) %}
+  <div class="heading"><span data-fill-width>Civic Tech Montréal</span><br>{{ ev.series }} #{{ ev.number }}</div>
+{% endmacro %}
+
+
+{% macro photos(ev, size=280) %}
+  {% if ev.speakers and not ev.hide_photos %}
+    {% set n = ev.speakers|length %}
+    {% set sz = size if n == 1 else (size * 0.68)|int %}
+    <div class="photos {{ 'two' if n > 1 }}">
+      {% for sp in ev.speakers %}
+      <div class="photo" style="width: {{ sz }}px; height: {{ sz }}px">
+        {% if sp.photo %}<img src="{{ assets.photos[loop.index0] }}" style="object-position: {{ sp.photo_position }}">
+        {% else %}<div class="initials" style="font-size: {{ (sz * 0.36)|int }}px">{{ sp.initials }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+
+{# With no photo circles beside it, the date and the format pill sit side by side, in a row
+   as tall as a single photo (`min_h`) so the section keeps the same height either way. #}
+{% macro when(ev, px=40, min_h=0) %}
+  {% set side = not ev.speakers or ev.hide_photos %}
+  <div class="when {{ 'side' if side }}"{% if side %} style="min-height: {{ min_h }}px"{% endif %}>
+    <div class="lines">
+      <div class="line" style="font-size: {{ px }}px">{{ ev.date_fr_short|capitalize }}<span class="dot"> · </span>{{ ev.time_fr }}</div>
+      <div class="line" style="font-size: {{ px }}px">{{ ev.date_en_short }}<span class="dot"> · </span>{{ ev.time_en }}</div>
+    </div>
+    <div class="pill"><span>{{ ev.format_fr }}</span><i></i><span>{{ ev.format_en }}</span></div>
+  </div>
+{% endmacro %}
+
+
+{% macro speaker_names(ev, px) %}
+  {% if ev.speakers %}
+    <div class="speaker-name" style="font-size: calc({{ px }}px * var(--s))">{% for sp in ev.speakers %}<span{% if sp.placeholder %} class="placeholder"{% endif %}>{{ sp.name }}</span>{{ ' & ' if not loop.last }}{% endfor %}</div>
+  {% endif %}
+{% endmacro %}
+
+
+{# Bold the "Prefix:" lead-in if there is one; otherwise bold the whole title when `bold_all`
+   (used for speaker-less events like build nights, whose title is the main content). #}
+{% macro title(t, cls, px, bold_all=false) %}
+  <div class="title {{ cls }}" style="font-size: calc({{ px }}px * var(--s))">
+    {%- if t.prefix %}<b>{{ t.prefix }}</b> {{ t.rest }}
+    {%- elif bold_all %}<b class="whole">{{ t.rest }}</b>
+    {%- else %}{{ t.rest }}{% endif -%}
+  </div>
+{% endmacro %}
+
+
+{# ctMTL logo; each layout positions it absolutely in its bottom-left corner. #}
+{% macro logo(h) %}
+  <img class="logo" src="{{ assets.logo }}" style="height: {{ h }}px">
+{% endmacro %}

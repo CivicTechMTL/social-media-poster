@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+
+{% block style %}
+  <style>
+    /* Soft dark fade behind the talk text, purely decorative. */
+    .scrim {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 560px;
+      background: linear-gradient(to top, rgba(0,0,0,.24), rgba(0,0,0,.10) 65%, rgba(0,0,0,0));
+    }
+
+    .page {
+      position: absolute;
+      inset: 58px 64px 56px 68px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      margin-top: 30px;
+    }
+    
+    .talk {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 16px;  /* minimum spacing once the text has grown to fill */
+      margin-top: 24px;
+    }
+    .page > .logo {
+      left: 0;
+      bottom: 2px;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+<div class="page shadow">
+  {{ m.heading(ev) }}
+  <div class="top">
+    {{ m.when(ev, px=40, min_h=180) }}
+    {{ m.photos(ev, size=300) }}
+  </div>
+  <div class="talk" data-fit>
+    {{ m.speaker_names(ev, 62 if ev.speakers|length < 2 else 48) }}
+    {% set big = 1.3 if not ev.speakers else 1.0 %}
+    {{ m.title(ev.title_fr, "fr", 44 * big, bold_all=not ev.speakers) }}
+    {{ m.title(ev.title_en, "en", 44 * big, bold_all=not ev.speakers) }}
+  </div>
+  {{ m.logo(120) }}
+</div>
+{% endblock %}

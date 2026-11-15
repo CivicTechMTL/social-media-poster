@@ -1,0 +1,14 @@
+{
+  "number": "4",
+  "series": "Hacknight",
+  "date": "2026-02-12",
+  "bsky-backfill-date": "2026-02-11T10:00",
+  "time": "19:00",
+  "format": "online",
+  "speakers": [],
+  "talk": {
+    "en": "February Hacknight",
+    "fr": "Hacknight de février"
+  },
+  "luma": "https://luma.com/ehcnklzv"
+}

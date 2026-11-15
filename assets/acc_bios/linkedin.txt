@@ -1,0 +1,9 @@
+TAGLINE
+
+Montréal's civic tech community · La communauté civic tech de Montréal
+
+ABOUT
+
+The Civic Tech Community aims to solve civic issues with a human centered approach, bringing together technologists, designers, policy nerds, artists, and general members of the community to collaborate and come up with solutions to issues that matter most to them.
+
+This is done by attending organized "hacknights", where participants can pitch their own projects, or collaborate with other Community led organizations to help them reach their goals with technology. It’s a great way to contribute to open source projects and to have an impact on your community! Everyone is welcome and tech knowledge is definitely not a requirement.

@@ -1,0 +1,19 @@
+{
+  "number": "2",
+  "series": "Hacknight",
+  "date": "2025-12-16",
+  "bsky-backfill-date": "2025-12-15T10:00",
+  "time": "18:30",
+  "format": "in-person",
+  "speakers": [
+    {
+      "name": "Zaid Khraibut"
+    }
+  ],
+  "hide_photos": true,
+  "talk": {
+    "en": "Building Digital Solutions in Canada's North",
+    "fr": "Créer des solutions numériques dans le Nord canadien"
+  },
+  "luma": "https://luma.com/n4pemchi"
+}

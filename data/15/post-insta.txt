@@ -1,0 +1,21 @@
+Public services only work if people can actually use them.
+
+At our November meetup, Maxime Cuillerier presented Mimi, a human-centred AI project that turns complex public-service information into step-by-step guidance, especially for older adults and people facing digital barriers, through phone calls, an interactive service system, and local kiosks. It was developed by Team Yadokari at the Taiwan Presidential Hackathon (International Track), with Civic Tech Montréal members on the team.
+
+🗓️ Thursday, November 12 · 6:00 PM
+📍 In person + online
+
+Agenda: a talk + Q&A with Maxime, then open working time in breakout groups. No experience required; everyone is welcome!
+
+———
+
+Les services publics ne fonctionnent que si les gens peuvent vraiment s'en servir.
+
+À notre meetup de novembre, Maxime Cuillerier a présenté Mimi, un projet d'IA centré sur l'humain qui transforme l'information complexe des services publics en étapes simples, surtout pour les aînés et les personnes qui font face à des obstacles numériques, par appel téléphonique, un système de services interactif et des bornes locales. Le projet a été conçu par l'équipe Yadokari au Taiwan Presidential Hackathon (volet international), avec des membres de Civic Tech Montréal dans l'équipe.
+
+🗓️ Jeudi 12 novembre · 18 h
+📍 En personne + en ligne
+
+Au programme : une présentation + période de questions avec Maxime, puis du temps de travail en groupes. Aucune expérience requise; tout le monde est bienvenu !
+
+https://luma.com/3s21h9py

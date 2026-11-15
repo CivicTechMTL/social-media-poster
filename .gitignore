@@ -1,0 +1,12 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+
+# Output of poe bg-demo
+out/
+
+# Local reference material (other groups' posts, logo variants)
+assets/_refs/

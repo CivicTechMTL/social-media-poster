@@ -1,0 +1,4 @@
+# Let git normalise line endings, but keep shell scripts on LF everywhere so `source setup.sh`
+# works in Git Bash on Windows too (core.autocrlf would otherwise check them out as CRLF).
+* text=auto
+*.sh text eol=lf

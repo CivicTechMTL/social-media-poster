@@ -1,0 +1,30 @@
+# Dependencies live in requirements.txt (installed by setup.ps1 / setup.sh).
+# This file only holds the task runner config: run `poe` to list tasks.
+
+[tool.poe.tasks.render]
+cmd = "python -m src.make_image"
+help = "Render images into the event folder, e.g. poe render data/100 --layout card"
+
+[tool.poe.tasks.render-all]
+cmd = "python -m src.make_image --all"
+help = "Render every layout for every event in data/"
+
+[tool.poe.tasks.serve]
+cmd = "python -m src.serve"
+help = "Live preview of the image HTML at http://localhost:8000"
+
+[tool.poe.tasks.bsky-check]
+cmd = "python -m src.bsky_post --dry-run"
+help = "Check an event's Bluesky post without posting, e.g. poe bsky-check data/100"
+
+[tool.poe.tasks.bsky-post]
+cmd = "python -m src.bsky_post"
+help = "Post an event to Bluesky (asks for confirmation), e.g. poe bsky-post data/100"
+
+[tool.poe.tasks.bg-demo]
+cmd = "python -m src.bg_demo"
+help = "Render a year of backgrounds into out/bg-demo/ with a contact sheet"
+
+[tool.poe.tasks.logo]
+cmd = "python tools/make_logo.py"
+help = "Regenerate assets/logo-white.png from the teal logo"

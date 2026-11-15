@@ -1,0 +1,18 @@
+{
+  "number": "17",
+  "date": "2026-12-10",
+  "time": "18:30",
+  "format": "hybrid",
+  "speakers": [
+    {
+      "name": "À confirmer · To be announced",
+      "initials": "?",
+      "placeholder": true
+    }
+  ],
+  "talk": {
+    "en": "..............................",
+    "fr": ".............................."
+  },
+  "luma": "https://luma.com/908s4dkr"
+}

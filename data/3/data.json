@@ -1,0 +1,19 @@
+{
+  "number": "3",
+  "series": "Hacknight",
+  "date": "2026-01-15",
+  "bsky-backfill-date": "2026-01-14T10:00",
+  "time": "18:30",
+  "format": "hybrid",
+  "speakers": [
+    {
+      "name": "Maxime Cuillerier",
+      "photo": "maxime.jpg"
+    }
+  ],
+  "talk": {
+    "en": "Co-created Digital Public Services and How Civic Hacking Can Help",
+    "fr": "Les services publics numériques cocréés et l'apport du civic hacking"
+  },
+  "luma": "https://luma.com/m2qinnhr"
+}

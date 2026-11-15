@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+
+{% block style %}
+<style>
+  .card {
+    position: absolute;
+    inset: 54px;
+    border-radius: 46px;
+    border: 2px solid rgba(255,255,255,.62);
+    background: linear-gradient(160deg, rgba(255,255,255,.12), rgba(0,0,0,.10));
+    box-shadow: 0 20px 60px rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.25);
+    padding: 46px 56px 44px 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .rule {
+    height: 2px;
+    background: rgba(255,255,255,.55);
+    margin: 26px 0 22px;
+    flex: none;
+  }
+  
+  .talk {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 18px;  /* minimum spacing once the text has grown to fill */
+  }
+  .card > .logo {
+    left: 60px;
+    bottom: 46px;
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="card shadow">
+  {{ m.heading(ev) }}
+  <div class="top">
+    {{ m.when(ev, px=38, min_h=150) }}
+    {{ m.photos(ev, size=250) }}
+  </div>
+  <div class="rule"></div>
+  <div class="talk" data-fit>
+    {{ m.speaker_names(ev, 44) }}
+    {% set big = 1.25 if not ev.speakers else 1.0 %}
+    {{ m.title(ev.title_fr, "fr", 42 * big, bold_all=not ev.speakers) }}
+    {{ m.title(ev.title_en, "en", 42 * big, bold_all=not ev.speakers) }}
+  </div>
+  {{ m.logo(110) }}
+</div>
+{% endblock %}

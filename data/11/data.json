@@ -1,0 +1,21 @@
+{
+  "number": "11",
+  "date": "2026-09-10",
+  "time": "18:00",
+  "format": "hybrid",
+  "speakers": [
+    {
+      "name": "Laura Ortiz",
+      "photo": "laura.jpg"
+    },
+    {
+      "name": "Ben Reilly",
+      "photo": "ben.jpg"
+    }
+  ],
+  "talk": {
+    "en": "Residential Data Presentation: Project Update",
+    "fr": "Présentation des données résidentielles : mise à jour du projet"
+  },
+  "luma": "https://luma.com/c48u14bs"
+}

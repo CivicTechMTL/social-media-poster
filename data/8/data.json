@@ -1,0 +1,18 @@
+{
+  "number": "8",
+  "date": "2026-06-04",
+  "bsky-backfill-date": "2026-06-03T10:00",
+  "time": "18:30",
+  "format": "hybrid",
+  "speakers": [
+    {
+      "name": "Maxime Tousignant",
+      "photo": "maxime-t.jpg"
+    }
+  ],
+  "talk": {
+    "en": "Smoothop: Civic Work Has Value. Here's How to Pay for It",
+    "fr": "Smoothop : le travail civique a de la valeur. Voici comment le financer"
+  },
+  "luma": "https://luma.com/xc7prb8i"
+}
