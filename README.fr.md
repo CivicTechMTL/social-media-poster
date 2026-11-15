@@ -51,7 +51,10 @@ Lancez `poe render --help` (ou n'importe quelle tâche avec `--help`) pour voir 
 
 ### 1. Ajouter les données de l'événement
 
-Créez `data/<numéro>/data.json` et déposez la ou les photos des conférenciers à côté :
+Créez `data/<numéro>/data.json` et déposez la ou les photos des conférenciers à côté. Les noms de
+dossier sont complétés par des zéros sur trois chiffres pour qu'ils se trient correctement
+(`data/007`, `data/010.5`), mais les commandes acceptent les deux formes : `poe render data/7` trouve
+`data/007`.
 
 ```json
 {
@@ -169,7 +172,7 @@ src/            Le code; les scripts derrière les tâches poe sont au premier n
   posting/      Publication sur les médias sociaux (Bluesky)
 templates/      Gabarits HTML Jinja pour chaque mise en page
 assets/         Polices et logos, plus les bios des comptes (_refs/ est local seulement, hors git)
-data/           Un dossier par événement : data.json, texte de publication, texte alternatif, bg.jpg, img-*.jpg
+data/           Un dossier par événement (avec zéros : 002, 010.5) : data.json, textes, visuels
 tools/          Outils ponctuels (générateur de logo, téléversement des couvertures Luma)
 ```
 

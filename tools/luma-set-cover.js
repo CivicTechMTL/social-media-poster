@@ -16,7 +16,7 @@
 //   POST api.luma.com/event/admin/update {event_api_id, cover_url, tint_color}
 
 (() => {
-  // event folder name (data/<n>) -> Luma event id
+  // event number (data/<n> folder name without zero padding) -> Luma event id
   const EVENTS = {
     "2": "evt-RSiSPHQ24SjNOvR",    // n4pemchi  2025-12-16  Hacknight #2 Zaid Khraibut
     "3": "evt-3uH2d7FQbOtogUF",    // m2qinnhr  2026-01-15  Hacknight #3 Maxime Cuillerier
@@ -109,11 +109,13 @@
 
   $("[data-close]").onclick = () => panel.remove();
   $("[data-files]").onchange = (e) => {
-    // webkitRelativePath looks like "data/100/img-open.jpg"; the event key is the folder name.
+    // webkitRelativePath looks like "data/002/img-open.jpg"; the event key is the folder name
+    // without its zero padding ("002" -> "2", "010.5" -> "10.5").
     jobs = [...e.target.files]
       .map((file) => ({ file, parts: file.webkitRelativePath.split("/") }))
       .filter(({ parts }) => parts.length >= 2 && parts.at(-1) === POSTER)
-      .map(({ file, parts }) => ({ file, key: parts.at(-2), id: EVENTS[parts.at(-2)] }))
+      .map(({ file, parts }) => ({ file, key: String(parseFloat(parts.at(-2))) }))
+      .map((j) => ({ ...j, id: EVENTS[j.key] }))
       .sort((a, b) => parseFloat(a.key) - parseFloat(b.key));
     $("[data-list]").innerHTML = jobs.length
       ? jobs.map((j, i) => `<li><label><input type="checkbox" data-pick="${i}" ${j.id ? "" : "disabled"}> ` +

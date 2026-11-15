@@ -24,7 +24,6 @@ from __future__ import annotations
 import argparse
 import os
 import sys
-from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -39,7 +38,7 @@ from .posting.bluesky import (
     jpeg_under_limit,
     publish,
 )
-from .shared.paths import ENV_FILE, LAYOUTS, display, image_path
+from .shared.paths import ENV_FILE, LAYOUTS, display, event_folder, image_path
 
 
 def main() -> int:
@@ -48,7 +47,7 @@ def main() -> int:
         stream.reconfigure(encoding="utf-8")
 
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("event", type=Path, help="event folder, e.g. data/100")
+    ap.add_argument("event", type=event_folder, help="event folder, e.g. data/100 (data/2 finds data/002)")
     ap.add_argument("--layout", choices=LAYOUTS, default="card")
     ap.add_argument("--dry-run", action="store_true", help="validate and preview only; don't post")
     ap.add_argument("--yes", "-y", action="store_true", help="skip the confirmation prompt")

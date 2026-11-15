@@ -49,7 +49,9 @@ Every script option works through its task, e.g. `poe render data/100 --reroll 2
 
 ### 1. Add the event data
 
-Create `data/<number>/data.json` and drop the speaker photo(s) beside it:
+Create `data/<number>/data.json` and drop the speaker photo(s) beside it. Folder names are zero-padded
+to three digits so they sort properly (`data/007`, `data/010.5`), but commands accept either form:
+`poe render data/7` finds `data/007`.
 
 ```json
 {
@@ -158,7 +160,7 @@ src/            The code; the scripts behind the poe tasks sit at the top level
   posting/      Posting to social media (Bluesky)
 templates/      Jinja HTML templates for each layout
 assets/         Fonts and logos, plus account bios (_refs/ is local only, not in git)
-data/           One folder per event: data.json, post text, alt text, bg.jpg, img-*.jpg
+data/           One folder per event (zero-padded: 002, 010.5): data.json, post text, alt text, images
 tools/          One-off helpers (logo generator, Luma cover uploader)
 ```
 

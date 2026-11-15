@@ -17,7 +17,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
 
 from .shared.event import Event
-from .shared.paths import DATA, LAYOUTS
+from .shared.paths import DATA, LAYOUTS, padded
 from .images.render import build_html, event_background
 
 EVENT_DIRS = [DATA]
@@ -84,7 +84,7 @@ class Handler(BaseHTTPRequestHandler):
             if not parts:
                 return self._send(200, index_page())
             if len(parts) == 3 and parts[2] in LAYOUTS:
-                folder = find_events().get(f"{parts[0]}/{parts[1]}")
+                folder = find_events().get(f"{parts[0]}/{padded(parts[1])}")  # /data/2/card works too
                 if folder is None:
                     return self._send(404, "Unknown event")
                 reroll = parse_qs(url.query).get("reroll", [""])[0]

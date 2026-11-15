@@ -17,7 +17,7 @@ import json
 from pathlib import Path
 
 from .shared.event import Event
-from .shared.paths import DATA, LAYOUTS, display, image_path
+from .shared.paths import DATA, LAYOUTS, display, event_folder, image_path
 from .images.render import Renderer, event_background
 
 
@@ -38,7 +38,7 @@ def all_events() -> list[Path]:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("events", nargs="*", type=Path, help="event folder(s) containing data.json")
+    ap.add_argument("events", nargs="*", type=event_folder, help="event folder(s) containing data.json, e.g. data/100 (data/2 finds data/002)")
     ap.add_argument("--all", action="store_true", help="render every event folder in data/")
     ap.add_argument("--layout", choices=(*LAYOUTS, "all"), default="all", help="which layout to render (default: all)")
     ap.add_argument("--reroll", default="", help="any value: reshuffle the background blobs and overwrite bg.jpg")

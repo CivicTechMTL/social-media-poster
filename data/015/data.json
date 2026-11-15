@@ -1,0 +1,17 @@
+{
+  "number": 15,
+  "date": "2026-11-12",
+  "time": "18:00",
+  "format": "hybrid",
+  "speakers": [
+    {
+      "name": "Maxime Cuillerier",
+      "photo": "maxime.jpg"
+    }
+  ],
+  "talk": {
+    "en": "Mimi: Accessible AI for Public Services",
+    "fr": "Mimi : une IA accessible pour les services publics"
+  },
+  "luma": "https://luma.com/3s21h9py"
+}
