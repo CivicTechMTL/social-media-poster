@@ -1,7 +1,14 @@
 # Civic Tech Montréal Social Media Poster
 
-Generates 1080×1080 bilingual (FR/EN) promo images for [Civic Tech Montréal](https://mtl.civictech.ca/) meetups, on a
-blob-gradient background whose colours follow Montréal's seasons.
+**English** | [Français](README.fr.md)
+
+A set of tools for generating 1080×1080 bilingual (FR/EN) promo images for
+[Civic Tech Montréal](https://mtl.civictech.ca/) meetups, on a blob-gradient background whose colours
+follow Montréal's seasons, and posting them to social media.
+
+You can render the images, preview them in a browser, and post them to Bluesky with their alt text
+(including backdated posts for past events). Instagram captions and alt text live alongside them for
+posting by hand.
 
 ## Setup
 
